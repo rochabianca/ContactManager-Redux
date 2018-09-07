@@ -5,7 +5,6 @@ import {
   GET_CONTACT,
   UPDATE_CONTACT
 } from "../actions/types";
-import { stat } from "fs";
 
 const initialState = {
   contacts: [],
@@ -41,7 +40,7 @@ export default function(state = initialState, action) {
         ...state,
         contacts: state.contacts.map(
           contact =>
-            contact.id == action.payload.id
+            contact.id === action.payload.id
               ? (contact = action.payload)
               : contact
         )
