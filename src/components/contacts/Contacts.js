@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Contact from "./Contact";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { getContacts } from "../../actions/contactActions";
 
 class Contacts extends Component {
@@ -24,9 +24,9 @@ class Contacts extends Component {
   }
 }
 
-Contacts.PropTypes = {
-  contacts: PropTypes.array.isRequired,
-  getContacts: PropTypes.func.isRequired
+Contacts.propTypes = {
+  contacts: propTypes.array.isRequired,
+  getContacts: propTypes.func.isRequired
 };
 
 const matStateToProps = state => ({
